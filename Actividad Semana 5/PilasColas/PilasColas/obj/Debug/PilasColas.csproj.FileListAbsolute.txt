@@ -1,0 +1,10 @@
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\PilasColas\PilasColas\obj\Debug\PilasColas.csproj.AssemblyReference.cache
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\PilasColas\PilasColas\obj\Debug\PilasColas.frmPrincipal.resources
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\PilasColas\PilasColas\obj\Debug\PilasColas.Properties.Resources.resources
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\PilasColas\PilasColas\obj\Debug\PilasColas.csproj.GenerateResource.cache
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\PilasColas\PilasColas\obj\Debug\PilasColas.csproj.CoreCompileInputs.cache
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\PilasColas\PilasColas\bin\Debug\PilasColas.exe.config
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\PilasColas\PilasColas\bin\Debug\PilasColas.exe
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\PilasColas\PilasColas\bin\Debug\PilasColas.pdb
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\PilasColas\PilasColas\obj\Debug\PilasColas.exe
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\PilasColas\PilasColas\obj\Debug\PilasColas.pdb
