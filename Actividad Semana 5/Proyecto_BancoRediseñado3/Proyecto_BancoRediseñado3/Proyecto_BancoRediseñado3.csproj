@@ -46,13 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAcces\Implementaciones\ClienteDao.cs" />
+    <Compile Include="DataAcces\Interfaces\IClienteDao.cs" />
+    <Compile Include="Servicio\Implementaciones\ClienteService.cs" />
+    <Compile Include="Servicio\Interface\IClienteService.cs" />
     <Compile Include="Servicio\ServiceFactoryImplementation.cs" />
     <Compile Include="Servicio\AbstractServiceFactoy.cs" />
     <Compile Include="DataAcces\Implementaciones\CuentaDao.cs" />
     <Compile Include="DataAcces\Interfaces\ICuentaDao.cs" />
     <Compile Include="Dominio\Cliente.cs" />
     <Compile Include="Dominio\Cuenta.cs" />
-    <Compile Include="Servicio\Implementaciones\GestorCliente.cs" />
     <Compile Include="Servicio\Implementaciones\GestorCuenta.cs" />
     <Compile Include="Servicio\Implementaciones\GestorInformatico.cs" />
     <Compile Include="Servicio\Implementaciones\GestorTransacciones.cs" />

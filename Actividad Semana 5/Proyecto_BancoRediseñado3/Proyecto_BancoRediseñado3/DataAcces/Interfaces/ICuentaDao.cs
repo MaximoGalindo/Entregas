@@ -10,6 +10,6 @@ namespace Proyecto_BancoRediseñado3.DataAcces.Interfaces
     interface ICuentaDao
     {
         DataTable ConsultarDB();
-        bool CrearCuenta(double saldo, int tipoCuenta, DateTime ultMov, int dni, string estado);
+        bool CrearCuenta(Cuenta c);
     }
 }

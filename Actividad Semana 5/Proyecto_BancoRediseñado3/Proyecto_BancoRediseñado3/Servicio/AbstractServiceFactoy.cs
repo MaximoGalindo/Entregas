@@ -10,5 +10,6 @@ namespace Proyecto_BancoRediseñado3
     abstract class AbstractServiceFactoy
     {
         public abstract ICuentaService CrearGestorCuenta();
+        public abstract IClienteService CrearClienteService();
     }
 }

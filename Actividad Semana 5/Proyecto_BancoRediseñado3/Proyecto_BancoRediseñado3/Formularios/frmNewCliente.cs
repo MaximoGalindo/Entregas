@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_BancoRediseñado3.Servicio.Interface;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,16 +15,18 @@ namespace Proyecto_BancoRediseñado3
     {
         frmPrincipal formPrincipal;
 
-        GestorCliente GCliente;
+        //GestorCliente GCliente;
+        private IClienteService oClienteService;
+
 
         public List<Cliente> lClientes = new List<Cliente>();
 
         public frmNewCliente(frmPrincipal principal)
         {
             InitializeComponent();
-            GCliente = new GestorCliente();
+            //GCliente = new GestorCliente();
             formPrincipal = principal;
-
+            oClienteService = new ServiceFactoryImplementation().CrearClienteService();
         }
 
         private void frmNewCliente_Load(object sender, EventArgs e)
@@ -34,7 +37,7 @@ namespace Proyecto_BancoRediseñado3
 
         public void CargarLista()
         {
-            DataTable tabla = GCliente.CargarCliente();
+            DataTable tabla = oClienteService.CargarListaClientes();
             for (int i = 0; i < tabla.Rows.Count; i++)
             {
                 Cliente c = new Cliente();
@@ -57,7 +60,7 @@ namespace Proyecto_BancoRediseñado3
 
                 if (!existe(c))
                 {
-                    if (GCliente.CrearCliente(c))
+                    if (oClienteService.CrearCliente(c))
                     {
                         MessageBox.Show("Cliente registrado");
                         formPrincipal.CargarLista();

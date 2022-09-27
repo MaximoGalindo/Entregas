@@ -10,6 +10,6 @@ namespace Proyecto_BancoRediseñado3.Servicio.Interface
     interface ICuentaService
     {
         DataTable CargarCombo();
-        bool CrearCliente();
+        bool CrearCuenta(Cuenta c);
     }
 }

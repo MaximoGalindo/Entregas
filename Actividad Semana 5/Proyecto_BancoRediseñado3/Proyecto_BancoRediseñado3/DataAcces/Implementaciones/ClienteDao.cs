@@ -1,33 +1,31 @@
-﻿using System;
+﻿using Proyecto_BancoRediseñado3.DataAcces.Interfaces;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-namespace Proyecto_BancoRediseñado3
+
+namespace Proyecto_BancoRediseñado3.DataAcces.Implementaciones
 {
-    class GestorCliente
-    {       
-        public DataTable CargarCliente()
+    class ClienteDao : IClienteDao
+    {
+        public DataTable ConsultarDB()
         {
-            HelperDAO helper = HelperDAO.ObtenerInstancia();
-            return helper.ConsultarDB("SP_lstClientes");
+            return HelperDAO.ObtenerInstancia().ConsultarDB("SP_lstClientes");
         }
 
-        public bool CrearCliente(Cliente oCliente)
+        public bool CargarCliente(Cliente oCliente)
         {
-            HelperDAO helper = HelperDAO.ObtenerInstancia();
-
             List<Parametros> lParametros = new List<Parametros>();
             lParametros.Add(new Parametros("@dni", oCliente.DNI));
             lParametros.Add(new Parametros("@nombre", oCliente.Nombre));
             lParametros.Add(new Parametros("@apellido", oCliente.Apellido));
 
-            if (helper.Transaccion("SP_insertCliente", lParametros) > 0)
+            if (HelperDAO.ObtenerInstancia().Transaccion("SP_insertCliente", lParametros) > 0)
                 return true;
             else
                 return false;
         }
-
     }
 }

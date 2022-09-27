@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_BancoRediseñado3.Servicio.Interface;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,11 @@ namespace Proyecto_BancoRediseñado3
     public partial class frmNewCuenta : Form
     {
         frmInformacion formInformacion;
-    
-        //Estado estado;
-        GestorCuenta GCuenta;
 
+        //Estado estado;
+        //GestorCuenta GCuenta;
+        private ICuentaService oCuentaService;
+    
         int doc;
 
         public frmNewCuenta(frmInformacion Informacion,int dni)
@@ -24,7 +26,8 @@ namespace Proyecto_BancoRediseñado3
             InitializeComponent();
             formInformacion = Informacion;
             doc = dni;
-            GCuenta = new GestorCuenta();
+            //GCuenta = new GestorCuenta();
+            oCuentaService = new ServiceFactoryImplementation().CrearGestorCuenta();
         }
 
         private void frmNewCuenta_Load(object sender, EventArgs e)
@@ -34,7 +37,7 @@ namespace Proyecto_BancoRediseñado3
 
         private void CargarCBO()
         {
-            DataTable tabla = GCuenta.ConsultarDB() ;
+            DataTable tabla = oCuentaService.CargarCombo() ;
             cboTipoCuenta.DataSource = tabla;
             cboTipoCuenta.DisplayMember = tabla.Columns[1].ColumnName;
             cboTipoCuenta.ValueMember = tabla.Columns[0].ColumnName;
@@ -46,13 +49,13 @@ namespace Proyecto_BancoRediseñado3
         {
             Cuenta c = new Cuenta();
 
-            int dni = doc;
-            DateTime ultMov = dtpUltMov.Value;
-            int tipoCuenta = Convert.ToInt32(cboTipoCuenta.SelectedValue);
-            int saldo = Convert.ToInt32(txtSaldo.Text);
-            string estado = "A";
+            c.Cliente.DNI = doc;
+            c.UltimoMovimiento = dtpUltMov.Value;
+            c.TipoCuenta = Convert.ToInt32(cboTipoCuenta.SelectedValue);
+            c.Saldo = Convert.ToInt32(txtSaldo.Text);
+            c.Estado = "A";
 
-            if (GCuenta.CrearCuenta(saldo, tipoCuenta, ultMov, dni, estado))
+            if (oCuentaService.CrearCuenta(c))
             {
                 MessageBox.Show("Se registro correctamente la cuenta");
                 formInformacion.Visible = true;

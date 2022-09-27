@@ -11,7 +11,12 @@ namespace Proyecto_BancoRediseñado3
     {
         public override ICuentaService CrearGestorCuenta()
         {
-            throw new NotImplementedException();
+            return new GestorCuenta();
+        }
+
+        public override IClienteService CrearClienteService()
+        {
+            return new ClienteService();
         }
     }
 }

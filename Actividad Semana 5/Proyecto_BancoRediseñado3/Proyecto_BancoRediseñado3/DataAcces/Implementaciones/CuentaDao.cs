@@ -17,25 +17,23 @@ namespace Proyecto_BancoRediseñado3.DataAcces.Implementaciones
             return HelperDAO.ObtenerInstancia().ConsultarDB("SP_TipoCuenta");
         }
 
-        public bool CrearCuenta(double saldo, int tipoCuenta, DateTime ultMov, int dni, string estado)
+        public bool CrearCuenta(Cuenta oCuenta)
         {
-            HelperDAO helper = HelperDAO.ObtenerInstancia();
-
-            Cuenta cuenta = new Cuenta(saldo, tipoCuenta, ultMov, dni, estado);
+            Cuenta cuenta = new Cuenta(oCuenta.Saldo, oCuenta.TipoCuenta, oCuenta.UltimoMovimiento, oCuenta.Cliente, oCuenta.Estado);
             cliente.AgregarCuenta(cuenta);
 
             List<Parametros> lParametros = new List<Parametros>();
-            lParametros.Add(new Parametros("@saldo", saldo));
-            lParametros.Add(new Parametros("@tipoCuenta", tipoCuenta));
-            lParametros.Add(new Parametros("@ultMov", ultMov));
-            lParametros.Add(new Parametros("@dni", dni));
-            lParametros.Add(new Parametros("@estado", estado));
-
-            if (helper.Transaccion("SP_insertCuenta", lParametros) > 0)
+            lParametros.Add(new Parametros("@saldo", oCuenta.Saldo));
+            lParametros.Add(new Parametros("@tipoCuenta", oCuenta.TipoCuenta));
+            lParametros.Add(new Parametros("@ultMov", oCuenta.UltimoMovimiento));
+            lParametros.Add(new Parametros("@dni", oCuenta.Cliente.DNI));
+            lParametros.Add(new Parametros("@estado", oCuenta.Estado));
+            if (HelperDAO.ObtenerInstancia().Transaccion("SP_insertCuenta", lParametros) > 0)
                 return true;
             else
                 return false;
         }
+
 
     }
 }

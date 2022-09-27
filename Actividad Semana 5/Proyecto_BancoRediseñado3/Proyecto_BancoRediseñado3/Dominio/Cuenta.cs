@@ -13,9 +13,6 @@ namespace Proyecto_BancoRediseñado3
         public int TipoCuenta { get; set; }
         public DateTime UltimoMovimiento { get; set; }
         public string Estado { get; set; }
-
-        Cliente cliente = new Cliente();
-
         public Cliente Cliente { set; get; }
 
         public Cuenta()
@@ -25,15 +22,15 @@ namespace Proyecto_BancoRediseñado3
             TipoCuenta = 0;
             UltimoMovimiento = DateTime.Today;
             Estado = "A";
-            cliente = new Cliente();
+            Cliente = new Cliente();
         }
 
-        public Cuenta(double saldo, int tipoCuenta, DateTime ultimoMovimiento, int DniCliente, string estado)
+        public Cuenta(double saldo, int tipoCuenta, DateTime ultimoMovimiento, Cliente cliente, string estado)
         {
             Saldo = saldo;
             TipoCuenta = tipoCuenta;
             UltimoMovimiento = ultimoMovimiento;
-            cliente.DNI = DniCliente;
+            Cliente = cliente;
             Estado = estado;
         }
 
