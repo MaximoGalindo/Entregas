@@ -1,0 +1,12 @@
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\BancoSLN\DataAPI\obj\Debug\net6.0\DataAPI.csproj.AssemblyReference.cache
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\BancoSLN\DataAPI\obj\Debug\net6.0\DataAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\BancoSLN\DataAPI\obj\Debug\net6.0\DataAPI.AssemblyInfoInputs.cache
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\BancoSLN\DataAPI\obj\Debug\net6.0\DataAPI.AssemblyInfo.cs
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\BancoSLN\DataAPI\obj\Debug\net6.0\DataAPI.csproj.CoreCompileInputs.cache
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\BancoSLN\DataAPI\bin\Debug\net6.0\DataAPI.deps.json
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\BancoSLN\DataAPI\bin\Debug\net6.0\DataAPI.dll
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\BancoSLN\DataAPI\bin\Debug\net6.0\DataAPI.pdb
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\BancoSLN\DataAPI\obj\Debug\net6.0\DataAPI.dll
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\BancoSLN\DataAPI\obj\Debug\net6.0\refint\DataAPI.dll
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\BancoSLN\DataAPI\obj\Debug\net6.0\DataAPI.pdb
+C:\Users\Maxi\Desktop\Tecnicatura\2doCuatrimestre\Programacion\Proyectos\BancoSLN\DataAPI\obj\Debug\net6.0\ref\DataAPI.dll

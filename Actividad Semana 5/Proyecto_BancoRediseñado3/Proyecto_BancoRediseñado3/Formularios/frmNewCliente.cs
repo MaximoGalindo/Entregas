@@ -26,7 +26,7 @@ namespace Proyecto_BancoRediseñado3
             InitializeComponent();
             //GCliente = new GestorCliente();
             formPrincipal = principal;
-            oClienteService = new ServiceFactoryImplementation().CrearClienteService();
+            oClienteService = new ServiceFactoryImplementation().CrearClienteService(); //new ClienteService();
         }
 
         private void frmNewCliente_Load(object sender, EventArgs e)
